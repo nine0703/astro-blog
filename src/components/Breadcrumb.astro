@@ -23,13 +23,13 @@ if (breadcrumbList[0] === "tags" && !isNaN(Number(breadcrumbList[2]))) {
 }
 ---
 
-<nav class="app-layout mt-8 mb-1" aria-label="breadcrumb">
-  <ul
-    class="font-light [&>li]:inline [&>li:not(:last-child)>a]:hover:opacity-100"
-  >
+<nav
+  class="mx-auto mt-8 mb-1 w-full max-w-6xl px-4 sm:px-6 lg:px-8"
+  aria-label="breadcrumb"
+>
+  <ul class="breadcrumbs text-sm">
     <li>
-      <a href="/" class="opacity-80">Home</a>
-      <span aria-hidden="true" class="opacity-80">&raquo;</span>
+      <a href="/">Home</a>
     </li>
     {
       breadcrumbList.map((breadcrumb, index) =>
@@ -45,10 +45,9 @@ if (breadcrumbList[0] === "tags" && !isNaN(Number(breadcrumbList[2]))) {
           </li>
         ) : (
           <li>
-            <a href={`/${breadcrumb}/`} class="capitalize opacity-70">
+            <a href={`/${breadcrumb}/`} class="capitalize">
               {breadcrumb}
             </a>
-            <span aria-hidden="true">&raquo;</span>
           </li>
         )
       )
