@@ -1,0 +1,24 @@
+{
+  "main": [
+    {
+      "name": "微信",
+      "icon": "FiFacebook",
+      "link": "#"
+    },
+    {
+      "name": "公众号",
+      "icon": "FiInstagram",
+      "link": "#"
+    },
+    {
+      "name": "企业邮箱",
+      "icon": "FiGithub",
+      "link": "mailto:contact@example.com"
+    },
+    {
+      "name": "商务合作",
+      "icon": "FiLinkedin",
+      "link": "/contact"
+    }
+  ]
+}

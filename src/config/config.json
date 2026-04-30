@@ -1,0 +1,47 @@
+{
+  "site": {
+    "title": "星澜科技",
+    "base_url": "https://example.com",
+    "base_path": "/",
+    "trailing_slash": false,
+    "favicon": "/images/favicon.png",
+    "logo": "",
+    "logo_width": "147",
+    "logo_height": "31",
+    "logo_text": "星澜科技"
+  },
+
+  "settings": {
+    "pagination": 6,
+    "summary_length": 100
+  },
+
+  "google_tag_manager": {
+    "enable": false,
+    "gtm_id": "GTM-XXXXXX"
+  },
+
+  "call_to_action": {
+    "title": "让企业官网成为可信赖的数字门户",
+    "description": "从品牌展示、业务说明到线索收集，星澜科技帮助企业以更清晰的方式连接客户与合作伙伴。",
+    "button": {
+      "label": "联系我们",
+      "link": "/contact"
+    }
+  },
+
+  "params": {
+    "footer_description": "星澜科技专注企业数字化门户建设，以清晰的信息架构和稳定的交付能力，帮助企业呈现品牌、产品与服务价值。",
+    "email": "contact@example.com",
+    "location": "中国 · 上海",
+    "phone": "400-000-0000",
+    "contact_form_action": "#",
+    "copyright": "Copyright © 2026 星澜科技 保留所有权利"
+  },
+
+  "metadata": {
+    "meta_author": "星澜科技",
+    "meta_image": "/images/og-image.png",
+    "meta_description": "星澜科技企业门户网站"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "main": [
+    {
+      "name": "首页",
+      "url": "/"
+    },
+    {
+      "name": "关于我们",
+      "url": "/about"
+    },
+    {
+      "name": "解决方案",
+      "url": "/solutions"
+    },
+    {
+      "name": "新闻动态",
+      "url": "/blog"
+    },
+    {
+      "name": "联系我们",
+      "url": "/contact"
+    }
+  ],
+
+  "footer": [
+    {
+      "name": "关于我们",
+      "url": "/about"
+    },
+    {
+      "name": "解决方案",
+      "url": "/solutions"
+    },
+    {
+      "name": "新闻动态",
+      "url": "/blog"
+    },
+    {
+      "name": "联系我们",
+      "url": "/contact"
+    }
+  ]
+}

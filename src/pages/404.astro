@@ -1,24 +1,24 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-import Header from "@/components/Header.astro";
-import Footer from "@/components/Footer.astro";
-import { SITE } from "@/config";
+import Base from "@/layouts/Base.astro";
+import { Image } from "astro:assets";
 ---
 
-<Layout title={`404 Not Found | ${SITE.title}`}>
-  <Header />
-
-  <main
-    id="main-content"
-    class="mx-auto flex w-full max-w-4xl flex-1 items-center justify-center px-4 sm:px-6 lg:px-8"
-  >
-    <div class="mb-14 flex flex-col items-center justify-center">
-      <h1 class="text-9xl font-bold text-primary">404</h1>
-      <span aria-hidden="true">¯\_(ツ)_/¯</span>
-      <p class="mt-4 text-2xl sm:text-3xl">Page Not Found</p>
-      <a href="/" class="btn my-6 btn-primary"> Go back home </a>
+<Base title="页面未找到">
+  <section class="section">
+    <div class="container">
+      <div class="flex h-[40vh] items-center justify-center">
+        <div class="text-center">
+          <Image
+            src="/images/404.png"
+            class="mb-4 inline"
+            alt="页面未找到"
+            height={120}
+            width={120}
+          />
+          <h1 class="mb-4" set:html={"页面未找到"} />
+          <a href="/" class="btn btn-primary mt-8">返回首页</a>
+        </div>
+      </div>
     </div>
-  </main>
-
-  <Footer />
-</Layout>
+  </section>
+</Base>
