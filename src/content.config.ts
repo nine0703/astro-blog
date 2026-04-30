@@ -1,27 +1,22 @@
-import { defineCollection } from "astro:content";
-import { z } from "astro/zod";
-import { glob } from "astro/loaders";
-import { SITE } from "@/config";
-
-export const BLOG_PATH = "src/data/blog";
+import { defineCollection, z } from 'astro:content'
+import { glob } from 'astro/loaders'
 
 const blog = defineCollection({
-  loader: glob({ pattern: "**/[^_]*.md", base: `./${BLOG_PATH}` }),
-  schema: ({ image }) =>
-    z.object({
-      author: z.string().default(SITE.author),
-      pubDatetime: z.date(),
-      modDatetime: z.date().optional().nullable(),
-      title: z.string(),
-      featured: z.boolean().optional(),
-      draft: z.boolean().optional(),
-      tags: z.array(z.string()).default(["others"]),
-      ogImage: image().or(z.string()).optional(),
-      description: z.string(),
-      canonicalURL: z.string().optional(),
-      hideEditPost: z.boolean().optional(),
-      timezone: z.string().optional(),
-    }),
-});
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/blog' }),
+  schema: z.object({
+    id: z.number(),
+    slug: z.string(),
+    title: z.string(),
+    description: z.string(),
+    imageUrl: z.string().optional(),
+    imageAlt: z.string().optional(),
+    pubDate: z.string(),
+    author: z.string().default('澜心研究院'),
+    avatarUrl: z.string().optional(),
+    category: z.string().default('行业洞察'),
+    readTime: z.number().optional(),
+    featured: z.boolean().default(false)
+  })
+})
 
-export const collections = { blog };
+export const collections = { blog }

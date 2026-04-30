@@ -1,0 +1,25 @@
+---
+import Layout from '@/layouts/Layout.astro'
+
+import ContactUs from '@/components/blocks/contact-us/contact-us'
+
+// Page-specific SEO configuration
+const pageTitle = ''
+const pageDescription =
+  '联系澜心医疗科技，沟通智慧医院、患者服务和医疗数据治理项目需求。'
+const pageKeywords =
+  '医疗数字化咨询, 智慧医院建设, 医疗数据治理, 患者服务'
+
+// Structured data for better SEO
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: '联系澜心医疗科技',
+  description: pageDescription,
+  url: 'https://example.com/contact-us'
+}
+---
+
+<Layout title={pageTitle} description={pageDescription} keywords={pageKeywords} schema={schema}>
+  <ContactUs />
+</Layout>
