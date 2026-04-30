@@ -43,6 +43,7 @@ Prerequisites to get _Giscus_ working are
   is [public](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility#making-a-repository-public)
 - the [Giscus app](https://github.com/apps/giscus) is installed
 -
+
 the [Discussions](https://docs.github.com/en/github/administering-a-repository/managing-repository-settings/enabling-or-disabling-github-discussions-for-a-repository)
 feature is turned on for your repository
 

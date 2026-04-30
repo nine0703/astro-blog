@@ -56,7 +56,9 @@ to avoid prop drilling.
 Here’s a quick recap for the tech stack.
 
 -
+
 Frontend: [ReactJS](https://reactjs.org/ "React Website"), [TypeScript](https://www.typescriptlang.org/ "TypeScript Website")
+
 - Styling: [Styled-Components](https://styled-components.com/ "Styled-Components Website")
 - UI/UX: [Figma](https://figma.com/ "Figma Website")
 - State Management: [ContextAPI](https://reactjs.org/docs/context.html "React ContextAPI")
@@ -102,4 +104,5 @@ user-interface (even though this is kind of a frontend project).
 
 - Website: [https://terminal.satnaing.dev/](https://terminal.satnaing.dev/ "https://terminal.satnaing.dev/")
 -
+
 Repo: [https://github.com/satnaing/terminal-portfolio](https://github.com/satnaing/terminal-portfolio "https://github.com/satnaing/terminal-portfolio")

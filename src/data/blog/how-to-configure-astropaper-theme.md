@@ -81,10 +81,10 @@ the `max-w-app` utility in your `global.css`. For instance:
 
 ```css file=src/styles/global.css
 @utility max-w-app {
-  /* [!code --:1] */
-  @apply max-w-3xl;
-  /* [!code ++:1] */
-  @apply max-w-4xl xl:max-w-5xl;
+    /* [!code --:1] */
+    @apply max-w-3xl;
+    /* [!code ++:1] */
+    @apply max-w-4xl xl:max-w-5xl;
 }
 ```
 
@@ -265,12 +265,12 @@ import { Font } from "astro:assets";
 
 ```css file=src/styles/global.css
 @theme inline {
-  --font-app: var(--font-your-font); /* [!code highlight] */
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-accent: var(--accent);
-  --color-muted: var(--muted);
-  --color-border: var(--border);
+    --font-app: var(--font-your-font); /* [!code highlight] */
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-accent: var(--accent);
+    --color-muted: var(--muted);
+    --color-border: var(--border);
 }
 ```
 
