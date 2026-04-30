@@ -12,15 +12,19 @@ tags:
 description: How you can make AstroPaper theme absolutely yours.
 ---
 
-AstroPaper is a highly customizable Astro blog theme. With AstroPaper, you can customize everything according to your personal taste. This article will explain how you can make some customizations easily in the config file.
+AstroPaper is a highly customizable Astro blog theme. With AstroPaper, you can customize everything according to your
+personal taste. This article will explain how you can make some customizations easily in the config file.
 
 ## Table of contents
 
 ## Configuring SITE
 
-The important configurations resides in `src/config.ts` file. Within that file, you'll see the `SITE` object where you can specify your website's main configurations.
+The important configurations resides in `src/config.ts` file. Within that file, you'll see the `SITE` object where you
+can specify your website's main configurations.
 
-During development, it's okay to leave `SITE.website` empty. But in production mode, you should specify your deployed url in `SITE.website` option since this will be used for canonical URL, social card URL etc.. which are important for SEO.
+During development, it's okay to leave `SITE.website` empty. But in production mode, you should specify your deployed
+url in `SITE.website` option since this will be used for canonical URL, social card URL etc.. which are important for
+SEO.
 
 ```js file=src/config.ts
 export const SITE = {
@@ -51,7 +55,7 @@ export const SITE = {
 Here are SITE configuration options
 
 | Options               | Description                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `website`             | Your deployed website URL                                                                                                                                                                                                                                                                                                                                                                                                         |
 | `author`              | Your name                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | `profile`             | Your personal/portfolio website URL which is used for better SEO. Put `null` or empty string `""` if you don't have any.                                                                                                                                                                                                                                                                                                          |
@@ -72,7 +76,8 @@ Here are SITE configuration options
 
 ## Update layout width
 
-The default `max-width` for the entire blog is `768px` (`max-w-3xl`). If you'd like to change it, you can easily update the `max-w-app` utility in your `global.css`. For instance:
+The default `max-width` for the entire blog is `768px` (`max-w-3xl`). If you'd like to change it, you can easily update
+the `max-w-app` utility in your `global.css`. For instance:
 
 ```css file=src/styles/global.css
 @utility max-w-app {
@@ -87,7 +92,8 @@ You can explore more `max-width` values in the [Tailwind CSS docs](https://tailw
 
 ## Configuring logo or title
 
-Prior to AstroPaper v5, you can update your site name/logo in `LOGO_IMAGE` object inside `src/config.ts` file. However, in AstroPaper v5, this option has been removed in favor of Astro's built-in SVG and Image components.
+Prior to AstroPaper v5, you can update your site name/logo in `LOGO_IMAGE` object inside `src/config.ts` file. However,
+in AstroPaper v5, this option has been removed in favor of Astro's built-in SVG and Image components.
 
 ![An arrow pointing at the website logo](https://res.cloudinary.com/noezectz/v1663911318/astro-paper/AstroPaper-logo-config_goff5l.png)
 
@@ -123,7 +129,8 @@ You might want to use this option if you want to use an SVG logo.
   </a>
   ```
 
-The best part of this approach is that you can customize your SVG styles as needed. In the example above, you can see how the SVG logo color can be inverted in dark mode.
+The best part of this approach is that you can customize your SVG styles as needed. In the example above, you can see
+how the SVG logo color can be inverted in dark mode.
 
 ### Option 3: Astro's Image component
 
@@ -153,7 +160,9 @@ If your logo is an image but not SVG, you can use Astro's Image component.
   </a>
   ```
 
-With this approach, you can still adjust your image's appearance using CSS classes. However, this might not always fit what you want. If you need to display different logo images based on light or dark mode, check how light/dark icons are handled inside the `Header.astro` component.
+With this approach, you can still adjust your image's appearance using CSS classes. However, this might not always fit
+what you want. If you need to display different logo images based on light or dark mode, check how light/dark icons are
+handled inside the `Header.astro` component.
 
 ## Configuring social links
 
@@ -198,11 +207,14 @@ You can configure share links in `SHARE_LINKS` object inside `src/constants.ts`.
 
 ## Configuring fonts
 
-AstroPaper uses Astro's [experimental fonts API](https://docs.astro.build/en/reference/experimental-flags/fonts/) with [Google Sans Code](https://fonts.google.com/specimen/Google+Sans+Code) as the default font. This provides consistent typography across all platforms with automatic font optimizations including preloading and caching.
+AstroPaper uses Astro's [experimental fonts API](https://docs.astro.build/en/reference/experimental-flags/fonts/)
+with [Google Sans Code](https://fonts.google.com/specimen/Google+Sans+Code) as the default font. This provides
+consistent typography across all platforms with automatic font optimizations including preloading and caching.
 
 ### Using the default font
 
-The font is automatically configured in `astro.config.ts` and loaded in `Layout.astro`. No additional configuration is needed to use the default Google Sans Code font.
+The font is automatically configured in `astro.config.ts` and loaded in `Layout.astro`. No additional configuration is
+needed to use the default Google Sans Code font.
 
 ### Customizing the font
 
@@ -262,10 +274,16 @@ import { Font } from "astro:assets";
 }
 ```
 
-The `--font-app` variable is used throughout the theme via the `font-app` Tailwind utility class, so updating this single variable will apply your custom font everywhere.
+The `--font-app` variable is used throughout the theme via the `font-app` Tailwind utility class, so updating this
+single variable will apply your custom font everywhere.
 
-> **Note**: Make sure the font name matches exactly as it appears on [Google Fonts](https://fonts.google.com). For other font providers or local fonts, refer to the [Astro Experimental Fonts API documentation](https://docs.astro.build/en/reference/experimental-flags/fonts/).
+> **Note**: Make sure the font name matches exactly as it appears on [Google Fonts](https://fonts.google.com). For other
+> font providers or local fonts, refer to
+> the [Astro Experimental Fonts API documentation](https://docs.astro.build/en/reference/experimental-flags/fonts/).
 
 ## Conclusion
 
-This is the brief specification of how you can customize this theme. You can customize more if you know some coding. For customizing styles, please read [this article](https://astro-paper.pages.dev/posts/customizing-astropaper-theme-color-schemes/). Thanks for reading.✌🏻
+This is the brief specification of how you can customize this theme. You can customize more if you know some coding. For
+customizing styles, please
+read [this article](https://astro-paper.pages.dev/posts/customizing-astropaper-theme-color-schemes/). Thanks for
+reading.✌🏻

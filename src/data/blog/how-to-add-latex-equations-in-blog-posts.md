@@ -8,7 +8,8 @@ tags:
 description: Learn how to add LaTeX equations in Astro blog posts using Markdown, KaTeX, and remark/rehype plugins.
 ---
 
-This document demonstrates how to use LaTeX equations in your Markdown files for AstroPaper. LaTeX is a powerful typesetting system often used for mathematical and scientific documents.
+This document demonstrates how to use LaTeX equations in your Markdown files for AstroPaper. LaTeX is a powerful
+typesetting system often used for mathematical and scientific documents.
 
 <figure>
   <img
@@ -101,7 +102,8 @@ In this section, you will find instructions on how to add support for LaTeX in y
    }
    ```
 
-And _voilà_, this setup allows you to write LaTeX equations in your Markdown files, which will be rendered properly when the site is built. Once you do it, the rest of the document will appear rendered correctly.
+And _voilà_, this setup allows you to write LaTeX equations in your Markdown files, which will be rendered properly when
+the site is built. Once you do it, the rest of the document will appear rendered correctly.
 
 ---
 
@@ -117,7 +119,8 @@ Inline equations are written between single dollar signs `$...$`. Here are some 
 
 ## Block Equations
 
-For more complex equations or when you want the equation to be displayed on its own line, use double dollar signs `$$...$$`:
+For more complex equations or when you want the equation to be displayed on its own line, use double dollar signs
+`$$...$$`:
 
 The Gaussian integral:
 

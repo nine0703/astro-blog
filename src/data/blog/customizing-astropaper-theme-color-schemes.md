@@ -13,13 +13,15 @@ description:
   of AstroPaper theme.
 ---
 
-This post will explain how you can enable/disable light & dark mode for the website. Moreover, you'll learn how you can customize color schemes of the entire website.
+This post will explain how you can enable/disable light & dark mode for the website. Moreover, you'll learn how you can
+customize color schemes of the entire website.
 
 ## Table of contents
 
 ## Enable/disable light & dark mode
 
-AstroPaper theme will include light and dark mode by default. In other words, there will be two color schemes\_ one for light mode and another for dark mode. This default behavior can be disabled in `SITE` configuration object.
+AstroPaper theme will include light and dark mode by default. In other words, there will be two color schemes\_ one for
+light mode and another for dark mode. This default behavior can be disabled in `SITE` configuration object.
 
 ```js file="src/config.ts"
 export const SITE = {
@@ -52,7 +54,8 @@ To disable `light & dark mode` set `SITE.lightAndDarkMode` to `false`.
 
 By default, if we disable `SITE.lightAndDarkMode`, we will only get system's prefers-color-scheme.
 
-Thus, to choose an initial color scheme instead of prefers-color-scheme, we have to set color scheme in the `initialColorScheme` variable inside `theme.ts`.
+Thus, to choose an initial color scheme instead of prefers-color-scheme, we have to set color scheme in the
+`initialColorScheme` variable inside `theme.ts`.
 
 ```ts file="src/scripts/theme.ts"
 // Initial color scheme
@@ -76,7 +79,8 @@ function getPreferTheme(): string {
 // ...
 ```
 
-The **initialColorScheme** variable can hold two values\_ `"light"`, `"dark"`. You can leave the empty string (default) if you don't want to specify an initial color scheme.
+The **initialColorScheme** variable can hold two values\_ `"light"`, `"dark"`. You can leave the empty string (default)
+if you don't want to specify an initial color scheme.
 
 - `""` - system's prefers-color-scheme. (default)
 - `"light"` - use light mode as initial color scheme.
@@ -116,14 +120,16 @@ html[data-theme="dark"] {
 /* ... */
 ```
 
-In the AstroPaper theme, the `:root` and `html[data-theme="light"]` selectors define the light color scheme, while `html[data-theme="dark"]` defines the dark color scheme.
+In the AstroPaper theme, the `:root` and `html[data-theme="light"]` selectors define the light color scheme, while
+`html[data-theme="dark"]` defines the dark color scheme.
 
-To customize your own color scheme, specify your light colors inside `:root, html[data-theme="light"]`, and your dark colors inside `html[data-theme="dark"]`.
+To customize your own color scheme, specify your light colors inside `:root, html[data-theme="light"]`, and your dark
+colors inside `html[data-theme="dark"]`.
 
 Here is the detail explanation of color properties.
 
 | Color Property | Definition & Usage                                            |
-| -------------- | ------------------------------------------------------------- |
+|----------------|---------------------------------------------------------------|
 | `--background` | Primary color of the website. Usually the main background.    |
 | `--foreground` | Secondary color of the website. Usually the text color.       |
 | `--accent`     | Accent color of the website. Link color, hover color etc.     |
@@ -145,4 +151,5 @@ html[data-theme="light"] {
 /* ... */
 ```
 
-> Check out some [predefined color schemes](https://astro-paper.pages.dev/posts/predefined-color-schemes/) AstroPaper has already crafted for you.
+> Check out some [predefined color schemes](https://astro-paper.pages.dev/posts/predefined-color-schemes/) AstroPaper
+> has already crafted for you.

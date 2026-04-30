@@ -10,7 +10,8 @@ tags:
 description: AstroPaper with the enhancements of Astro v2. Type-safe markdown contents, bug fixes and better dev experience etc.
 ---
 
-Astro 2.0 has been released with some cool features, breaking changes, DX improvements, better error overlay and so on. AstroPaper takes advantage of those cool features, especially Content Collections API.
+Astro 2.0 has been released with some cool features, breaking changes, DX improvements, better error overlay and so on.
+AstroPaper takes advantage of those cool features, especially Content Collections API.
 
 <!-- ![Introducing AstroPaper 2.0](https://user-images.githubusercontent.com/53733092/215683840-dc2502f5-8c5a-44f0-a26c-4e7180455056.png) -->
 
@@ -22,7 +23,8 @@ Astro 2.0 has been released with some cool features, breaking changes, DX improv
 
 ### Type-safe Frontmatters and Redefined Blog Schema
 
-Frontmatter of AstroPaper 2.0 markdown contents are now type-safe thanks to Astro’s Content Collections. Blog schema is defined inside the `src/content/_schemas.ts` file.
+Frontmatter of AstroPaper 2.0 markdown contents are now type-safe thanks to Astro’s Content Collections. Blog schema is
+defined inside the `src/content/_schemas.ts` file.
 
 ### New Home for Blog contents
 
@@ -43,20 +45,23 @@ Contents are now fetched with `getCollection` function. No relative path to the 
 
 ### Modified Search Logic for better Search Result
 
-In the older version of AstroPaper, when someone search some article, the search criteria keys that will be searched are `title`, `description` and `headings` (heading means all the headings h1 ~ h6 of the blog post). In AstroPaper v2, only `title` and `description` will be searched as the user types.
+In the older version of AstroPaper, when someone search some article, the search criteria keys that will be searched are
+`title`, `description` and `headings` (heading means all the headings h1 ~ h6 of the blog post). In AstroPaper v2, only
+`title` and `description` will be searched as the user types.
 
 ### Renamed Frontmatter Properties
 
 The following frontmatter properties are renamed.
 
 | Old Names | New Names   |
-| --------- | ----------- |
+|-----------|-------------|
 | datetime  | pubDatetime |
 | slug      | postSlug    |
 
 ### Default Tag for blog post
 
-If a blog post doesn't have any tag (in other words, frontmatter property `tags` is not specified), the default tag `others` will be used for that blog post. But you can set the default tag in the `/src/content/_schemas.ts` file.
+If a blog post doesn't have any tag (in other words, frontmatter property `tags` is not specified), the default tag
+`others` will be used for that blog post. But you can set the default tag in the `/src/content/_schemas.ts` file.
 
 ```ts
 // src/contents/_schemas.ts
@@ -71,17 +76,20 @@ export const blogSchema = z.object({
 
 ### New Predefined Dark Color Scheme
 
-AstroPaper v2 has a new dark color scheme (high contrast & low contrast) which is based on Astro's dark logo. Check out [this link](https://astro-paper.pages.dev/posts/predefined-color-schemes#astro-dark) for more info.
+AstroPaper v2 has a new dark color scheme (high contrast & low contrast) which is based on Astro's dark logo. Check
+out [this link](https://astro-paper.pages.dev/posts/predefined-color-schemes#astro-dark) for more info.
 
 ![New Predefined Dark Color Scheme](https://user-images.githubusercontent.com/53733092/215680520-59427bb0-f4cb-48c0-bccc-f182a428d72d.svg)
 
 ### Automatic Class Sorting
 
-AstroPaper 2.0 includes automatic class sorting with [TailwindCSS Prettier plugin](https://tailwindcss.com/blog/automatic-class-sorting-with-prettier)
+AstroPaper 2.0 includes automatic class sorting
+with [TailwindCSS Prettier plugin](https://tailwindcss.com/blog/automatic-class-sorting-with-prettier)
 
 ### Updated Docs & README
 
-All the [#docs](https://astro-paper.pages.dev/tags/docs/) blog posts and [README](https://github.com/satnaing/astro-paper#readme) are updated for this AstroPaper v2.
+All the [#docs](https://astro-paper.pages.dev/tags/docs/) blog posts
+and [README](https://github.com/satnaing/astro-paper#readme) are updated for this AstroPaper v2.
 
 ## Bug Fixes
 

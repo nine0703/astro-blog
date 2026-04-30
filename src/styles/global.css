@@ -1,31 +1,32 @@
 @import "tailwindcss";
+
 @plugin "daisyui";
 @plugin "@tailwindcss/typography";
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-    scrollbar-gutter: stable;
-  }
-
-  body {
-    @apply flex min-h-svh flex-col bg-base-100 text-base-content;
-  }
-
-  button:not(:disabled),
-  [role="button"]:not(:disabled) {
-    cursor: pointer;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
     html {
-      scroll-behavior: auto;
+        scroll-behavior: smooth;
+        scrollbar-gutter: stable;
     }
-  }
+
+    body {
+        @apply flex min-h-svh flex-col bg-base-100 text-base-content;
+    }
+
+    button:not(:disabled),
+    [role="button"]:not(:disabled) {
+        cursor: pointer;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        html {
+            scroll-behavior: auto;
+        }
+    }
 }
 
 /* Source: https://piccalil.li/blog/a-more-modern-css-reset/ */
 /* Anything that has been anchored to should have extra scroll margin */
 :target {
-  scroll-margin-block: 1rem;
+    scroll-margin-block: 1rem;
 }
