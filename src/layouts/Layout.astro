@@ -81,7 +81,7 @@ const seoProps = Astro.props as Props
     <script is:inline>
       ;(() => {
         const widgetScriptId = 'ai-consulting-widget-script'
-        const widgetKey = 'pub_4272141953604bd488957f31f6985544'
+        const widgetKey = 'pub_df8d6b6e28104b79aedca03948d4be78'
         const widgetSrc = 'http://localhost:5173/embed.js'
         const widgetSelector = `[data-ai-consulting-widget="${widgetKey}"]`
 
@@ -102,11 +102,11 @@ const seoProps = Astro.props as Props
           document.body.appendChild(script)
         }
 
-        if (!(window as any).__enterprisePortalAiWidgetMounted) {
-          ;(window as any).__enterprisePortalAiWidgetMounted = true
+        if (!window.__enterprisePortalAiWidgetMounted) {
+          window.__enterprisePortalAiWidgetMounted = true
 
           document.addEventListener('astro:before-swap', event => {
-            const nextDocument = (event as any).newDocument as Document
+            const nextDocument = event.newDocument
             const widget = document.querySelector(widgetSelector)
             const style = document.getElementById('ai-consulting-widget-nudge-style')
 
