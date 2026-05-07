@@ -1,0 +1,73 @@
+name: Deploy Astro Paper
+
+on:
+  push:
+    branches:
+      - codex/1.theme-current-astropaper
+
+concurrency:
+  group: auto-deploy-astropaper-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  DEPLOY_ROOT: /usr/share/nginx/astropaper
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.33.0
+          run_install: false
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+
+      - name: Verify environment
+        run: |
+          set -eu
+          node -v
+          pnpm -v
+          test -f package.json
+          test -f pnpm-lock.yaml
+
+      - name: Install dependencies
+        run: |
+          set -eu
+          pnpm install --frozen-lockfile --prefer-offline
+
+      - name: Build dist
+        run: |
+          set -eu
+          pnpm run build
+          test -d dist
+
+      - name: Check docker access
+        run: |
+          set -eu
+          docker version
+
+      - name: Deploy dist to host nginx root
+        run: |
+          set -eu
+          tar -C dist -cf - . | docker run --rm -i \
+            -v "$DEPLOY_ROOT:/target" \
+            alpine:3.20 \
+            sh -eu -c '
+              mkdir -p /target
+              find /target -mindepth 1 -maxdepth 1 -exec rm -rf {} +
+              tar -xf - -C /target
+            '
